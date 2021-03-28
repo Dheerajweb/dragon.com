@@ -1,0 +1,397 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+	font-family:'Lobster', cursive,sans-serif;
+
+}
+#loading{
+	position: fixed;
+	height: 100%;
+	width: 100%;
+	background:#000 url('file:///F:/mywebsites/7/preloder/load.gif') no-repeat center;
+	z-index: 99999;
+}
+.first{
+	position: relative;
+	min-height: 100vh;
+	width:100% ;
+	background:linear-gradient(rgba(0, 0, 0, 0.8),rgba(0, 0, 0, 0.9)), url('img/back.jpeg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center;
+	overflow: hidden;
+	
+}
+header{
+	position: fixed;
+	width: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	z-index: 2;
+}
+.photo{
+	position: absolute;
+	top: 0;
+	height: 142px;
+	width: 180px;
+	background: url('img/logo.png');
+	background-size: contain;
+	background-repeat: no-repeat;
+	z-index: 111;
+	animation: animate 1s linear infinite alternate;
+}
+@keyframes animate{
+	0%{
+		transform: scale(1);
+	}
+	100%{
+		transform: scale(1.1);
+	}
+}
+header::before{
+	content: ' ';
+	position: absolute;
+	left: 0;
+	top: 50px;
+	background:linear-gradient(180deg,#FB0404 50%,#000 50%);
+	width: 50%;
+	height: 50px;
+	z-index: 2;
+	
+}
+header::after{
+	content: ' ';
+	position: absolute;
+	right: 0;
+	top: 50px;
+	background: linear-gradient(180deg,#000 50%,#FB0404 50%);
+	width: 50%;
+	height: 50px;
+	z-index: 2;
+
+}
+.icon{
+	position: fixed;
+	left: 92%;
+	top: 52px;
+	display: block;
+	font-size: 30px;
+	font-weight: 900;
+	color: #fff;
+	cursor: pointer;
+	z-index: 1111;
+}
+.heading{
+	position: relative;
+	height: 100vh;
+	width: 100%;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.textbx{
+	position: absolute;
+}
+.textbx h1{
+	color: #fff;
+	text-align-last: center;
+	font-size: 3.3rem;
+	font-weight: 800;
+	line-height: 6rem;
+	letter-spacing: 4px;
+	user-select: none;
+	text-shadow: 0px 10px #000;
+}
+.textbx h1 span{
+position: relative;
+color: #FD0404;
+font-size: 5rem;
+animation: changer 4s linear infinite alternate;
+transition: all .5s ease-in-out;
+text-shadow: 0px 0px;
+}
+@keyframes changer{
+	0%{
+		filter: hue-rotate(0deg);
+	
+	}
+	100%{
+		filter: hue-rotate(360deg);
+	}
+}
+.textbx h1 span:hover{
+	animation-play-state: paused;
+}
+.slider{
+	position: absolute;
+	top: 100px;
+	right:-200px;
+	height: 100vh;
+	width: 200px;
+	background:linear-gradient(rgba(0, 0, 0, 0.6),rgba(0, 0, 0, 0.5)),  url('img/slider.jpeg') no-repeat center;
+	background-size: cover;
+	z-index: 111;
+	border-radius: 20px 0px 0px 20px;
+	transition: all .3s linear;
+	box-shadow: 0px 5px 5px 2px gold;
+
+	}
+.slider .sliderbx{
+	position:absolute;
+	
+
+}
+.sliderbx ul{
+list-style: none;
+}
+.sliderbx ul li{
+	display: block;
+	transition: background .2s ease-in-out;
+}
+
+.sliderbx ul li:hover{
+	width: 200px;
+	background: gold;
+	border-radius: 20px 20px 20px 20px;
+}
+.sliderbx ul li a{
+
+	color: #fff;
+	display: block;
+	text-decoration: none;
+	padding-top: 70px;
+	font-size: 1.5rem;
+	font-weight: 600;
+	padding:40px 0px 40px 60px;
+	text-transform: capitalize;
+	transition: color .2s ease-in-out;
+
+}
+.sliderbx ul li a:hover{
+	color :red;
+}
+
+
+
+
+
+
+
+
+                    /* 960 width */
+@media(max-width:960px){
+	.textbx h1 {
+		font-size: 2rem;
+		font-weight: 700;
+		line-height: 3rem;
+	}
+	.textbx h1 span {
+		font-size: 3rem;
+	}
+	.photo {
+		position: absolute;
+		top: 0;
+		height: 120px;
+		width: 150px;
+	}
+	.slider {
+		width: 150px;
+	}
+	.sliderbx ul li a {
+		font-size: 1rem;
+		font-weight: 400;
+		padding: 32px 0px 40px 60px;
+}
+}
+
+
+
+
+							 /* 800 width */
+
+@media(max-width:800px){
+	.textbx h1 {
+		font-size: 1rem;
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 2.5rem;
+	}
+	.textbx h1 span {
+		font-size: 2rem;
+	}
+	.photo {
+		position: absolute;
+		height: 100px;
+		width: 120px;
+		top: 25px;
+	}
+	.sliderbx ul li a {
+		font-weight: 300;
+		padding: 20px 0px 40px 60px;
+}
+}
+
+
+
+
+
+
+								 /* 650 width */
+@media(max-width:650px){
+	.textbx h1 {
+		font-size: 1rem;
+		font-weight: 500;
+		line-height: 2rem;
+	}
+	.textbx h1 span {
+		font-size: 2rem;
+	}
+	.photo {
+		position: absolute;
+		top: 25px;
+		height: 100px;
+		width: 120px;
+	}
+	.slider {
+		width: 100px;
+	}
+	.sliderbx ul li a {
+		font-size: .5rem;
+		font-weight: 300;
+		padding: 20px 0px 40px 40px;
+}
+.icon {
+    left: 91%;
+    top: 56px;
+    font-size: 25px;	
+}
+}
+
+
+
+
+
+
+								 /* 520 width */
+@media(max-width:520px){
+	.textbx h1 {
+		font-size: .5rem;
+		font-weight: 300;
+		line-height: 1.3rem;
+	}
+	.textbx h1 span {
+		font-size: 1rem;
+	}
+	.photo {
+		top: 29px;
+		height: 65px;
+		width: 85px;
+	}
+	.slider {
+		top: 76px;
+		width: 80px;
+		border-radius: 0px
+	}
+	.sliderbx ul li a {
+		font-size: .5rem;
+		font-weight: 300;
+		padding: 10px 0px 40px 30px;
+}
+.icon {
+    left: 91%;
+	top: 52px;
+    font-size: 15px;
+}
+header::before {
+    height: 25px;
+}
+header::after {
+    height: 25px;
+}
+.sliderbx ul li:hover {
+	width: 200px;
+	border-radius:0px;
+}	
+}
+
+
+
+
+
+
+								 /* 350 width */
+	 @media(max-width:350px){
+		.textbx h1 {
+			font-size: .3rem;
+			font-weight: 200;
+			line-height: 1rem;
+		}
+		.textbx h1 span {
+			font-size: .7rem;
+		}
+		.photo {
+			top: 29px;
+			height: 60px;
+            width: 75px;
+		}
+		.slider {
+			top: 75px;
+			width: 50px;
+			border-radius: 0px
+		}
+		.sliderbx ul li a {
+			font-size: .2rem;
+			font-weight: 100;
+			padding: 0px 0px 30px 20px;
+			margin-top: 20px;
+	}
+	.icon {
+		left: 91%;
+		top: 52px;
+		font-size: 15px;
+	}
+	header::before {
+		height: 25px;
+	}
+	header::after {
+		height: 25px;
+	}
+	.sliderbx ul li:hover {
+		width: 200px;
+		border-radius:0px;
+	}	
+	}
+
+
+
+
+
+
+
+
+				 /* 285 width */
+				 @media(max-width:285px){
+					.textbx h1 {
+						font-size: .2rem;
+						font-weight: 200;
+						line-height: .8rem;
+					}
+					.textbx h1 span {
+						font-size: .6rem;
+					}
+					.slider {
+						top: 75px;
+						width: 40px;
+						border-radius: 0px
+					}
+					.sliderbx ul li a {
+						font-size: .2rem;
+						font-weight: 100;
+						padding: 0px 0px 10px 10px;
+						margin-top: 30px;
+				}
+				.textbx h1 {
+					letter-spacing: 3px;
+				}

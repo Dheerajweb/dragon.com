@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Document</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body onload="welcome()">
+	<div id="loading"></div>
+	<audio src="music/Amplifier Imran Khan Bass Boosted New Punjabi Songs 2019.mp3" loop="loop" autoplay="autoplay" id="mymusic"></audio>
+	<section class="first">
+	<header>
+		<div class="photo" ></div>
+
+	</header>
+	<SPAN class="icon" onclick="ope()">&#9776</SPAN>
+	<!-- <SPAN class="close">&#10540</SPAN> -->
+
+	<div class="heading">	
+    <div class="textbx">
+    	<h1><span>W</span>elcome <span>T</span>o <span>D</span>ragon's 
+    		<br> <span>W</span>orld</h1>
+    </div>
+	</div>	
+
+	<div class="slider" id="slide">
+		<div class="sliderbx">
+			<ul>
+				<li><a href="#">video</a></li>
+				<li><a href="#">song</a></li>
+				<li><a href="#">dance</a></li>
+				<li><a href="#">hi</a></li>
+			</ul>
+		</div>
+	</div>
+	</section>
+	
+
+
+	<script type="text/javascript">
+		var welcome=()=>{
+			var x=document.getElementById('loading');
+			x.style.display='none';
+		}
+
+		var ope=()=>{
+			var t=document.getElementById('slide');
+			if(t.style.right=="-200px"){
+				t.style.right="0px";
+			}
+			else {
+				t.style.right="-200px";
+			}
+		}
+		
+		
+	</script>
+</body>
+</html>
